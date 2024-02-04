@@ -1,0 +1,172 @@
+//STYLES FOR THE ALL THE PROJECT PAGES
+html,
+body,
+header,
+.views {
+  height: 95vh;
+}
+.content{
+ text-align: center;
+ margin-top: 5px;
+ margin-bottom: 30px;
+ margin-left: 5%;
+ margin-right: 5%;
+ height: 250%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .views {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #0b1e50 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #0b1e50 !important;
+  }
+
+}
+@media (max-width: 575px) { .navbar:not(.top-nav-collapse) {
+                             background: #78909c !important;
+                             html,
+                               body,
+                               header,
+                               .views {
+                                 height: 100vh;
+                               }
+                          } }
+
+
+@media (max-width: 767px) { .navbar:not(.top-nav-collapse) {
+                             background: #78909c !important;
+                             html,
+                               body,
+                               header,
+                               .views {
+                                 height: 100vh;
+                               }
+                          } }
+h1 {
+  letter-spacing: 3px;
+}
+h2 {
+  letter-spacing: 3x;
+}
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 0.1em solid #fff;
+  width: 40%;
+  margin:auto;
+}
+.indexRow{
+ padding-bottom:3%;
+ padding-top:3%;
+}
+.stylistsTitle{
+padding-bottom:20px;
+text-align:center;
+}
+.card{
+ background-color:rgba(29, 20, 20, 0.4);
+}
+.transparentInputFields{
+ background-color:rgba(29, 20, 20, 0.4);
+}
+.alignCenter{
+padding-bottom:20px;
+padding-top:20px;
+width:20%;
+margin:auto;
+}
+.typeClass{
+padding-top:20px;
+
+}
+hr {
+   border-color: rgb(15, 114, 12);
+   border-width: 2px;
+   font-weight: bold;
+ }
+
+.bg-skyblue {
+    background-color: skyblue;
+ }
+
+.black-text-white-border {
+  color: black;
+  border-color: white;
+}
+
+//About App Page
+
+h1, h2, p, li, a {
+    text-transform: lowerrcase;
+}
+
+//ALL TABLE STYLES
+.table-text.light-grey {
+  background-color: lightgrey;
+  height:100%;
+}
+ .table-responsive {
+    height: 350px;
+    overflow-y: auto;
+  }
+.thead-green {
+  background-color: rgb(13, 71, 13);
+  color: white;
+}
+
+//DELETE BUTTON ON THE ANIMAL TABLE
+    .delete-btn {
+        border: 2px solid #351414;
+        border-radius: 5px;
+        background-color: transparent;
+        color: rgb(134, 25, 25);
+        padding: 5px 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .delete-btn:hover {
+        background-color: rgb(134, 25, 25);
+        color: rgba(255, 255, 255, 0.842);
+    }
+
+//TABLE SIZE STYLYING FOR ALL TABLES
+     .table-container {
+         margin-top: 20px;
+
+     }
+
+     .table-column {
+         display: inline-block;
+         vertical-align: top;
+         width: 70%;
+
+     }
+
+     @media (max-width: 767px) {
+         .table-column {
+             display: block;
+             width: 100%;
+         }
+     }
+
+.views {
+  height: 165vh;
+  text-align: center;
+}

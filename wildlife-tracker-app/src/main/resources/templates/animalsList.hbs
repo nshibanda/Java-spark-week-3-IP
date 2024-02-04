@@ -1,0 +1,130 @@
+{{#partial "title"}}
+    All Animals Page
+{{/partial}}
+
+{{#partial "content"}}
+    <div class="content" style="background-color:  #3d940a; background-size: cover; background-position: cover;">
+        <nav class="navbar navbar-expand-lg scrolling navbar">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <span style="color: green;"> <strong>The Wildlife Tracker App <i class="fas fa-mask animated rotateIn infinite white"></i></strong></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link border border-dark rounded" href="/"><span style="color: green;"><strong>HOME PAGE</strong></span> <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" href="/regular-animal-list"><span style="color: green;"><strong>REGULAR ANIMAL LIST</strong></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" href="/animal-list"><span style="color: green;"><strong>ENDANGERED ANIMALS LIST</strong></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" href="/sighting-list"><span style="color: green;"><strong>ANIMAL SIGHTING LIST</strong></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" href="/rangers-list"><span style="color: green;"><strong>RANGERS LIST</strong></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" href="/locations-list"><span style="color: green;"><strong>LOCATION LIST</strong></span></a>
+                        </li>
+                        <li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" style="color: green; border-color: white;" href="/add-animal"><strong>ADD REGULAR ANIMAL</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" style="color: green; border-color: white;" href="/add-endangered"><strong>ADD ENDANGERED</strong></a>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" style="color: green; border-color: white;" href="/add-sighting"><strong>ADD ANIMAL SIGHTING</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" style="color: green; border-color: white;"  href="/add-rangers"><strong>ADD WILDLIFE RANGER</strong>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" style="color: green; border-color: white;"  href="/add-locations"><strong>ADD A LOCATION</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="table-container">
+            <div class="table-column">
+                {{#if regularAnimals}}
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-text light-grey" id="animalsList">
+                            <thead class="thead-green">
+                            <tr>
+                                <th><strong>REGULAR ANIMAL NAME:</strong></th>
+                                <th><strong>REGULAR ANIMAL HEALTH:</strong></th>
+                                <th><strong>REGULAR ANIMAL AGE:</strong></th>
+                                <th><strong>DELETE FUNCTION:</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each regularAnimals}}
+                                <tr>
+                                    <td><strong>{{animalName}}</strong></td>
+                                    <td><strong>{{health}}</strong></td>
+                                    <td><strong>{{age}}</strong></td>
+                                    <td>
+                                        <a class="btn aqua delete-btn" title="delete {{animalName}}" type="button" href="/delete-regularAnimal/{{animalName}}" onclick="confirmDeletion('{{animalName}}')">
+                                            <strong>DELETE</strong>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                {{else}}
+                    <div class="no-data">
+                        <p><strong>If you need an animal added!Please consider adding one using the button above for Add Regular/Endangered Animal.</strong></p>
+                    </div>
+                {{/if}}
+
+            </div>
+            <div class="table-column">
+                {{#if endangeredAnimals}}
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-text green" id="animalsList">
+                            <thead class="thead-green">
+                            <tr>
+                                <th><strong>ENDANGERED ANIMAL NAME:</strong></th>
+                                <th><strong>ENDANGERED ANIMAL HEALTH:</strong></th>
+                                <th><strong>ENDANGERED ANIMAL AGE:</strong></th>
+                                <th><strong>DELETE FUNCTION:</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each endangeredAnimals}}
+                                <tr>
+                                    <td><strong>{{endangeredAnimalName}}</strong></td>
+                                    <td><strong>{{health}}</strong></td>
+                                    <td><strong>{{age}}</strong></td>
+                                    <td>
+                                        <a class="btn aqua delete-btn" title="delete {{endangeredAnimalName}}" type="button" href="/delete-endangeredAnimalName/{{endangeredAnimalName}}" onclick="confirmDeletion('{{endangeredAnimalName}}')">
+                                            <strong>DELETE</strong>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                {{else}}
+                    <div class="no-data">
+                        <p><strong>If you need an animal added!Please consider adding one using the button above for Add Regular/Endangered Animal.</strong></p>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{>layout.hbs}}
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="wild.life.tracker.model.RangersTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-02-02T08:08:48" hostname="DESKTOP-RG4DLHA" time="0.026">
+  <properties/>
+  <testcase name="Test to check if rangers_id passes the test" classname="wild.life.tracker.model.RangersTest" time="0.003"/>
+  <testcase name="Test to check if deleted when false passes the test" classname="wild.life.tracker.model.RangersTest" time="0.002"/>
+  <testcase name="Test to check if rangers_contact passes the test" classname="wild.life.tracker.model.RangersTest" time="0.002"/>
+  <testcase name="Test to check if rangers_name passes the test" classname="wild.life.tracker.model.RangersTest" time="0.001"/>
+  <testcase name="Test to check if badge_number passes the test" classname="wild.life.tracker.model.RangersTest" time="0.001"/>
+  <testcase name="Test to check if rangers_description passes the test" classname="wild.life.tracker.model.RangersTest" time="0.002"/>
+  <testcase name="Test to check if rangers_sightings passes the test" classname="wild.life.tracker.model.RangersTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

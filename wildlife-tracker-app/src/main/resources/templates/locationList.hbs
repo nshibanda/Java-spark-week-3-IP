@@ -1,0 +1,97 @@
+{{#partial "title"}}
+    Location List Page
+{{/partial}}
+
+{{#partial "content"}}
+    <div class="content" style="background-color:  #3d940a; background-size: cover; background-position: cover;">
+        <nav class="navbar navbar-expand-lg scrolling navbar">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <span style="color: green;"> <strong>The Wildlife Tracker App <i class="fas fa-mask animated rotateIn infinite white"></i></strong></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link border border-dark rounded" href="/"><span style="color: green;"><strong>HOME PAGE</strong></span> <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" href="/regular-animal-list"><span style="color: green;"><strong>REGULAR ANIMAL LIST</strong></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" href="/animal-list"><span style="color: green;"><strong>ENDANGERED ANIMALS LIST</strong></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" href="/sighting-list"><span style="color: green;"><strong>ANIMAL SIGHTING LIST</strong></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" href="/rangers-list"><span style="color: green;"><strong>RANGERS LIST</strong></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" href="/locations-list"><span style="color: green;"><strong>LOCATION LIST</strong></span></a>
+                        </li>
+                        <li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" style="color: green; border-color: white;" href="/add-animal"><strong>ADD REGULAR ANIMAL</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" style="color: green; border-color: white;" href="/add-endangered"><strong>ADD ENDANGERED</strong></a>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" style="color: green; border-color: white;" href="/add-sighting"><strong>ADD ANIMAL SIGHTING</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" style="color: green; border-color: white;"  href="/add-rangers"><strong>ADD WILDLIFE RANGER</strong>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark rounded" style="color: green; border-color: white;"  href="/add-locations"><strong>ADD A LOCATION</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="table-container">
+            <div class="table-column">
+                {{#if location}}
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-text light-grey" id="locationList">
+                            <thead class="thead-green">
+                            <tr>
+                                <th><strong>ZONE NAME:</strong></th>
+                                <th><strong>ZONE DESCRIPTION:</strong></th>
+                                <th><strong>ZONE QUADRANT</strong></th>
+                                <th><strong>LOCATION SIGHTINGS:</strong></th>
+                                <th><strong>DELETE FUNCTION:</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each location}}
+                                <tr>
+                                    <td><strong>{{zones_name}}</strong></td>
+                                    <td><strong>{{zones_descriptions}}</strong></td>
+                                    <td><strong>{{zones_quadrant}}</strong></td>
+                                    <td><strong>{{location_sightings}}</strong></td>
+                                    <td>
+                                        <a class="btn aqua delete-btn" title="delete {{zones_name}}" type="button" href="/delete-zones_name/:zones_name{{zones_name}}" onclick="confirmedDelete('{{zones_name}}')">
+                                            <strong>DELETE</strong>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                {{else}}
+                    <div class="no-data">
+                        <strong>There is no Location that has currently added.Please Add location using the link above.</strong>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
+{{/partial}}
+{{>layout.hbs}}

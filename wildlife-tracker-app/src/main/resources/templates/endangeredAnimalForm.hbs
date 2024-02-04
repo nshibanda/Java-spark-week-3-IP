@@ -1,0 +1,95 @@
+{{#partial "title"}}
+    Endangered Animal Page
+{{/partial}}
+
+{{#partial "content"}}
+    <nav class="navbar navbar-expand-lg scrolling navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <span style="color: green;"><strong>The Wildlife Tracker App</strong></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link border border-dark rounded" href="/"><span style="color: green;"><strong>HOME PAGE</strong></span> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark rounded" href="/regular-animal-list"><span style="color: green;"><strong>REGULAR ANIMAL LIST</strong></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark rounded" href="/animal-list"><span style="color: green;"><strong>ENDANGERED ANIMALS LIST</strong></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark rounded" href="/sighting-list"><span style="color: green;"><strong>ANIMAL SIGHTING LIST</strong></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark rounded" href="/rangers-list"><span style="color: green;"><strong>RANGERS LIST</strong></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark rounded" href="/locations-list"><span style="color: green;"><strong>LOCATION LIST</strong></span></a>
+                    </li>
+                    <li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark rounded" style="color: green; border-color: white;" href="/add-animal"><strong>ADD REGULAR ANIMAL</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark rounded" style="color: green; border-color: white;" href="/add-endangered"><strong>ADD ENDANGERED</strong></a>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark rounded" style="color: green; border-color: white;" href="/add-sighting"><strong>ADD ANIMAL SIGHTING</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark rounded" style="color: green; border-color: white;"  href="/add-rangers"><strong>ADD WILDLIFE RANGER</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark rounded" style="color: green; border-color: white;"  href="/add-locations"><strong>ADD A LOCATION</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="views" style="background-image: url('/images/endangeredAnimals.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div class="mask rgba-black-light align-items-center">
+            <div class="container">
+                <div class="indexRow">
+                    <div class="col-md-12 mb-4 white-text text-center">
+                        <h3 class="h3-reponsive text-black text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 animated wobble" style="color: green;"><strong> Add Endangered Animal: </strong></h3>
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-4">
+                                <form action="/add-endangered-animal" method="post">
+                                    <div class="form-group">
+                                        <label for="endangeredAnimalName" style="color: green;"><strong>ENDANGERED ANIMAL NAME:</strong></label>
+                                        <input type="text" name="endangeredAnimalName" class="form-control transparentInputFields" placeholder="Enter the endangered animal name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="health" style="color: green;"><strong>ENDANGERED ANIMAL HEALTH:</strong></label>
+                                        <select id="health" name="health" class="form-control transparentInputFields" required>
+                                            <option value="HEALTHY">HEALTHY</option>
+                                            <option value="OKAY">OKAY</option>
+                                            <option value="ILL">ILL</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="age" style="color: green;"><strong>ENDANGERED ANIMAL AGE:</strong></label>
+                                        <select id="age" name="age" class="form-control transparentInputFields" required>
+                                            <option value="NEWBORN">NEWBORN</option>
+                                            <option value="YOUNG">YOUNG</option>
+                                            <option value="ADULT">ADULT</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn btn-info black-text-white-border" type="submit" name="add-endangered-animal" onclick="return validatedForm()" style="background-color: green;"><strong>ADD AN ENDANGERED ANIMAL</strong></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{>layout.hbs}}
